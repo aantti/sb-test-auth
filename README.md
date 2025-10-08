@@ -1,7 +1,8 @@
 This project is based on [Use Supabase Auth with Next.js](https://supabase.com/docs/guides/auth/quickstarts/nextjs)
-See the original README [here](https://github.com/vercel/next.js/blob/canary/examples/with-supabase/README.md)
 
-## Clone and run locally
+See the original README [here](https://github.com/vercel/next.js/blob/canary/examples/with-supabase/README.md).
+
+## How to use
 
 1. You'll first need a Supabase account & project/database
 
@@ -11,7 +12,7 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
    git clone git@github.com:aantti/sb-test-auth.git
    ```
 
-3. Inside the `sb-test-auth` directory:
+3. Proceed to `sb-test-auth` directory:
 
    ```bash
    cd sb-test-auth && \
@@ -25,7 +26,7 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
    NEXT_PUBLIC_SUPABASE_ANON_KEY=[INSERT SUPABASE PROJECT API ANON KEY]
    ```
    
-   Both `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` can be found in [your Supabase project's API settings](https://supabase.com/dashboard/project/_?showConnect=true). Select the project, then check "App Frameworks"  and "Next.js."
+   Both `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` can be found in [your Supabase project's API settings](https://supabase.com/dashboard/project/_?showConnect=true). Select the project, then check "App Frameworks"  and "Next.js"
 
    When using [local development](https://supabase.com/docs/guides/local-development) enviroment, set these to:
 
@@ -34,11 +35,11 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
    NEXT_PUBLIC_SUPABASE_ANON_KEY=[INSERT PUBLISHABLE KEY FROM LOCAL DEV]
    ```
 
-5. You can now run the Next.js local development server:
+5. Start the Next.js local development server:
 
    ```bash
    npm run dev
    ```
 
-   The starter kit should now be running on [localhost:3000](http://localhost:3000/).
+   Check [localhost:3000](http://localhost:3000/).
 
