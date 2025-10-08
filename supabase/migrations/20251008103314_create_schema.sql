@@ -4,7 +4,6 @@ create table "public"."anyone_can_read_table" (
     "descr" text
 );
 
-
 alter table "public"."anyone_can_read_table" enable row level security;
 
 create table "public"."only_auth_users_can_read" (
@@ -14,16 +13,18 @@ create table "public"."only_auth_users_can_read" (
     "user_id" uuid default auth.uid()
 );
 
-
 alter table "public"."only_auth_users_can_read" enable row level security;
+
 
 CREATE UNIQUE INDEX anyone_can_read_table_pkey ON public.anyone_can_read_table USING btree (id);
 
 CREATE UNIQUE INDEX only_auth_users_can_read_pkey ON public.only_auth_users_can_read USING btree (id);
 
+
 alter table "public"."anyone_can_read_table" add constraint "anyone_can_read_table_pkey" PRIMARY KEY using index "anyone_can_read_table_pkey";
 
 alter table "public"."only_auth_users_can_read" add constraint "only_auth_users_can_read_pkey" PRIMARY KEY using index "only_auth_users_can_read_pkey";
+
 
 grant delete on table "public"."anyone_can_read_table" to "anon";
 
@@ -109,13 +110,13 @@ grant truncate on table "public"."only_auth_users_can_read" to "service_role";
 
 grant update on table "public"."only_auth_users_can_read" to "service_role";
 
+
 create policy "Enable read access for all users"
 on "public"."anyone_can_read_table"
 as permissive
 for select
 to public
 using (true);
-
 
 create policy "Enable users to view their own data only"
 on "public"."only_auth_users_can_read"
@@ -124,5 +125,9 @@ for select
 to authenticated
 using ((( SELECT auth.uid() AS uid) = user_id));
 
-
-
+create policy "Enable insert for authenticated users only"
+on "public"."only_auth_users_can_read"
+as permissive
+for insert
+to authenticated
+with check (true);
