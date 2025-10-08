@@ -18,5 +18,4 @@ INSERT INTO "public"."anyone_can_read_table" ("id", "created_at", "descr") VALUE
 --
 
 INSERT INTO "public"."only_auth_users_can_read" ("id", "created_at", "text_note", "user_id") VALUES
-	(1, '2025-10-08 12:04:56+00', 'THIS CAN''T BE READ BY ANYONE -- SPURIOUS USER_ID', '17ddeefd-5fff-66ee-bccc-66aabbccddef'),
-	(2, '2025-10-08 12:06:17+00', 'This is for Dude!', 'ca3cc9b0-3635-4f4e-9429-c40cbf9d12a2');
+	(1, '2025-10-08 12:04:56+00', 'THIS CAN''T BE READ BY ANYONE -- SPURIOUS USER_ID', '17ddeefd-5fff-66ee-bccc-66aabbccddef');
