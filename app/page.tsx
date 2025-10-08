@@ -28,9 +28,9 @@ export default function Home() {
         <div className="flex-1 flex flex-col gap-20 max-w-5xl p-5">
           <main className="flex-1 flex flex-col gap-6 px-4">
             <h2 className="font-medium text-xl mb-4">Here&rsquo;s something readable by anyone</h2>
-            <FetchTableData tableName="test_table_1" />
+            <FetchTableData tableName="anyone_can_read_table" />
             <h2 className="font-medium text-xl mb-4">Here&rsquo;s something readable only by authenticated users</h2>
-            <FetchTableData tableName="test_table_2" />
+            <FetchTableData tableName="only_auth_users_can_read" />
           </main>
         </div>
 
