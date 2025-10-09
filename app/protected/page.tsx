@@ -3,6 +3,8 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { InfoIcon } from "lucide-react";
 
+import Link from "next/link";
+
 import { FetchTableData } from "@/components/db/fetch-table-data";
 
 export default async function ProtectedPage() {
@@ -27,6 +29,11 @@ export default async function ProtectedPage() {
         <pre className="text-xs font-mono p-3 rounded border max-h-32 overflow-auto">
           {JSON.stringify(data.claims, null, 2)}
         </pre>
+        <div className="mt-4 text-center text-sm">
+          <Link href="/" className="underline underline-offset-4">
+          Return to homepage
+          </Link>
+        </div>
       </div>
     </div>
   );
