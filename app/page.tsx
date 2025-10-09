@@ -8,6 +8,7 @@ import { SignUpUserSteps } from "@/components/tutorial/sign-up-user-steps";
 import { hasEnvVars } from "@/lib/utils";
 import Link from "next/link";
 import { FetchTableData } from "@/components/db/fetch-table-data";
+import { InsertUserDataButton } from "@/components/insert-user-data-button";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
             <h2 className="font-medium text-xl mb-4">Here&rsquo;s something readable by anyone</h2>
             <FetchTableData tableName="anyone_can_read_table" />
             <h2 className="font-medium text-xl mb-4">Here&rsquo;s something readable only by authenticated users</h2>
+            <InsertUserDataButton />
             <FetchTableData tableName="only_auth_users_can_read" />
           </main>
         </div>

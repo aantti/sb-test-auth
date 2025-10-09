@@ -49,20 +49,6 @@ export function SignUpForm({
       });
       if (error) throw error;
 
-      // Insert a new row into only_auth_users_can_read table
-      if (data.user) {
-        const { error: insertError } = await supabase
-          .from('only_auth_users_can_read')
-          .insert({
-            text_note: `Added by ${email}`,
-            user_id: data.user.id
-          });
-
-        if (insertError) {
-          console.error('Error inserting user data:', insertError);
-        }
-      }
-
       router.push("/auth/sign-up-success");
     } catch (error: unknown) {
       setError(error instanceof Error ? error.message : "An error occurred");
