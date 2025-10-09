@@ -36,3 +36,10 @@ as permissive
 for select
 to authenticated
 using ((( SELECT auth.uid() AS uid) = user_id));
+
+create policy "Enable insert for authenticated users only"
+on "public"."only_auth_users_can_read"
+as permissive
+for insert
+to authenticated
+with check (true);
