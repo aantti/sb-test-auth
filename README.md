@@ -28,7 +28,7 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
 
 4. Initialize the database
 
-   Use [local development](https://supabase.com/docs/guides/local-development) environment to initialize remote managed database:
+   [Optional] Use [local development](https://supabase.com/docs/guides/local-development) environment:
 
    ```bash
    npx supabase init
@@ -37,6 +37,8 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
    ```bash
    npx supabase start
    ```
+
+   Initialize remote managed database:
 
    ```bash
    npx supabase login
