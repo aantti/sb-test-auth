@@ -72,7 +72,11 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
     - There's a row in the `only_auth_users_can_read` table for a non-existing user_id that
       noone can read (check via table editor in the UI)
 
+   Before signing up or signing in:
+
 <img width="1006" height="736" alt="not-logged-in" src="https://github.com/user-attachments/assets/c2c66b9d-dcf6-453d-af1d-3a2e3955c39d" />
+
+   After signing in and adding data:
 
 <img width="1007" height="737" alt="logged-in" src="https://github.com/user-attachments/assets/1b7e16f2-e2d0-4503-a084-7a62cc781d72" />
 
