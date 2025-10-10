@@ -39,6 +39,10 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
    ```
 
    ```bash
+   npx supabase login
+   ```
+
+   ```bash
    npx supabase link
    ```
 
@@ -54,16 +58,17 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
 
    Open [localhost:3000](http://localhost:3000/).
 
-6. How to test access to the database
+6. How to test access to the data
 
-- Sign up as a new user (via the "Sign Up" button)
-- Click on the email confirmation link
-- After confirming the new user signup, click on "Sign In" and log in
-- On the homescreen you'll be able to click "Add My Data to Table" (the reload the page)
-- Compare the "anyone_can_read_table" data with the "only_auth_users_can_read" table
-  - The authenticated user can read their own data from the "only_auth_users_can_read" table
-  - Other users' data should not be visible
-  - There's a row in the "only_auth_users_can_read" table for a non-existing user_id that noone can read
+  - Sign up as a new user (via the "Sign Up" button)
+  - Check email, click on the confirmation link
+  - After confirming the new user signup, click on "Sign In" and log in
+  - On the homescreen you'll be able to click "Add My Data to Table" (the reload the page)
+  - Compare the `anyone_can_read_table` data with the `only_auth_users_can_read` table
+    - The authenticated user can read their own data from the `only_auth_users_can_read` table
+    - Other users' data should not be visible
+    - There's a row in the `only_auth_users_can_read` table for a non-existing user_id that
+      noone can read (check via table editor in the UI)
 
 ## Local development
 
