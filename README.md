@@ -60,7 +60,7 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
 
    Open [localhost:3000](http://localhost:3000/).
 
-6. How to test access to the data
+6. How to test access to the data:
 
    - Sign up as a new user (via the "Sign Up" button)
    - Check email, click on the confirmation link
@@ -73,11 +73,15 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
       noone can read (check via table editor in the UI)
    - See below example screenshots before and after signing in and adding data
 
+---
+
 <img width="1006" height="736" alt="not-logged-in" src="https://github.com/user-attachments/assets/c2c66b9d-dcf6-453d-af1d-3a2e3955c39d" />
 
---- 
+---
 
 <img width="1007" height="737" alt="logged-in" src="https://github.com/user-attachments/assets/1b7e16f2-e2d0-4503-a084-7a62cc781d72" />
+
+---
 
 ## Local development
 
