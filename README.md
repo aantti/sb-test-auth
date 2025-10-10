@@ -62,21 +62,20 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
 
 6. How to test access to the data
 
-  - Sign up as a new user (via the "Sign Up" button)
-  - Check email, click on the confirmation link
-  - After confirming the new user signup, click on "Sign In" and log in
-  - On the homescreen you'll be able to click "Add My Data to Table" (the reload the page)
-  - Compare the `anyone_can_read_table` data with the `only_auth_users_can_read` table
-    - The authenticated user can read their own data from the `only_auth_users_can_read` table
-    - Other users' data should not be visible
-    - There's a row in the `only_auth_users_can_read` table for a non-existing user_id that
+   - Sign up as a new user (via the "Sign Up" button)
+   - Check email, click on the confirmation link
+   - After confirming the new user signup, click on "Sign In" and log in
+   - On the homescreen you'll be able to click "Add My Data to Table" (the reload the page)
+   - Compare the `anyone_can_read_table` data with the `only_auth_users_can_read` table
+     - The authenticated user can read their own data from the `only_auth_users_can_read` table
+     - Other users' data should not be visible
+     - There's a row in the `only_auth_users_can_read` table for a non-existing user_id that
       noone can read (check via table editor in the UI)
-
-   Before signing up or signing in:
+   - See below example screenshots before and after signing in and adding data
 
 <img width="1006" height="736" alt="not-logged-in" src="https://github.com/user-attachments/assets/c2c66b9d-dcf6-453d-af1d-3a2e3955c39d" />
 
-   After signing in and adding data:
+--- 
 
 <img width="1007" height="737" alt="logged-in" src="https://github.com/user-attachments/assets/1b7e16f2-e2d0-4503-a084-7a62cc781d72" />
 
