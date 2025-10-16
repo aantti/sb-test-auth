@@ -28,7 +28,7 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
 
 4. Initialize the database
 
-   [Optional] Use [local development](https://supabase.com/docs/guides/local-development) environment:
+   [Optional] When using [local development](https://supabase.com/docs/guides/local-development) environment:
 
    ```bash
    npx supabase init
@@ -38,7 +38,7 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
    npx supabase start
    ```
 
-   Initialize remote managed database:
+   Log into Supabase and link remote database:
 
    ```bash
    npx supabase login
@@ -48,6 +48,12 @@ See the original README [here](https://github.com/vercel/next.js/blob/canary/exa
    npx supabase link
    ```
 
+   [Optional] If cleaning up after a previous test:
+   ```bash
+   npx supabase db reset --linked
+   ```
+
+   Create tables with data:
    ```bash
    npx supabase db push --include-seed
    ```
